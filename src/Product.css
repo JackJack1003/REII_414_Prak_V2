@@ -1,0 +1,25 @@
+.product {
+  background-color: beige;
+  width: 25%;
+  height: 33%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.product-info {
+  display: flex;
+  align-content: left;
+  padding-right: 10px;
+}
+.myImg {
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+}
+
+.product-desc {
+  padding: 10px;
+}
+
+.product-name {
+  padding-right: 10px;
+}
