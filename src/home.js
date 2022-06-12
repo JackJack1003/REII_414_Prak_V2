@@ -4,14 +4,17 @@ import Axios from 'axios';
 import Header from './Header';
 import Banner from './Banner';
 import Product from './Product';
+import { useStateValue } from './StateProvider';
 
 function Home() {
   const [allProducts, setAllProducts] = useState([]);
-
+  const [{ searching }, dispatch] = useStateValue();
   useEffect(() => {
-    Axios.get('http://localhost:3001/api/get').then((response) => {
-      setAllProducts(response.data);
-    });
+    if (searching.s_value == false) {
+      Axios.get('http://localhost:3001/api/get').then((response) => {
+        setAllProducts(response.data);
+      });
+    }
   });
   return (
     <div>
